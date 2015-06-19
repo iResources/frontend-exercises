@@ -1,0 +1,61 @@
+
+<div class="panel panel-default">
+    <div class="panel-heading">Instructions</div>
+    <div class="panel-body">
+        <p>You are to implement a very basic shopping list controller & view.</p>
+        <p>
+            You you may only use built-in javascript objects & AnuglarJS, bootstrap css - use of other libraries is not permitted. Some of the 
+            boilerplate has been filled in for you.
+        </p>
+        <p class="alert alert-info">
+            For the JS in the following tasks you are to use AngularJS scope syntax.
+        </p>
+    </div>
+</div>
+<accordion>
+    <accordion-group is-open="ex1.open">
+        <accordion-heading>
+            Task 1 - Add an item
+            <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': ex1.open, 'glyphicon-chevron-right': !ex1.open}"></i>
+            <span ng-show="addItem" class="text-success pull-right">(Function declared)</span> 
+        </accordion-heading>
+        <p>You will implement a controller function called addItem.  It add an item to the list of shopping items.</p>
+        <div class="alert alert-warning">
+            <strong>Note</strong>
+            <ul>
+                <li>Function should allow the addition of duplicate items (exact match).</li>
+                <li>Function should not add empty items.</li>
+            </ul>
+        </div>
+    </accordion-group>
+    <accordion-group is-open="ex2.open">
+        <accordion-heading>
+            Task 2 - Remove an item
+            <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': ex2.open, 'glyphicon-chevron-right': !ex2.open}"></i>
+            <span ng-show="removeItem" class="text-success pull-right">(Function declared)</span> 
+        </accordion-heading>
+        <p>You will implement a controller function called removeItem.  It add an item from the current list of shopping items.</p>
+        <div class="alert alert-info">
+            <strong>Tips</strong>
+            <ul>
+                <li>There are few ways to do this, try to think collection based.</li>
+            </ul>
+        </div>
+    </accordion-group>
+    <accordion-group is-open="ex3.open">
+        <accordion-heading>
+            Task 3 - Implement the view template
+            <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': ex3.open, 'glyphicon-chevron-right': !ex3.open}"></i>
+        </accordion-heading>
+        <p>You will create make the view template.  It will interact with the user with functions which are declared in the controller.</p>
+        <p>It will display the current list of items, allow the user to enter an item & remove an item and the view will refresh with the new list.</p>
+        <p>Items will be displayed in alphabetical order.</p>
+    </accordion-group>
+    <accordion-group is-open="ex4.open">
+        <accordion-heading>
+            Task 4 - Style the view
+            <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': ex4.open, 'glyphicon-chevron-right': !ex4.open}"></i>
+        </accordion-heading>
+        <p>Style the shopping list & the inputs to look like the demo version.</p>
+    </accordion-group>
+</accordion>

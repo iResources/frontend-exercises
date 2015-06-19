@@ -1,0 +1,83 @@
+<div class="panel panel-default">
+    <div class="panel-heading">Instructions</div>
+    <div class="panel-body">
+        <p>You are to implement a basic list controller & view.  You will fetch any data required from the server.</p>
+        <p>
+            You you may only use built-in javascript objects & AnuglarJS, bootstrap css - use of other libraries is not permitted. Some of the 
+            boilerplate has been filled in for you.
+        </p>
+        <p class="alert alert-info">
+            For the JS in the following tasks you are to use AngularJS <code>controller as</code> syntax.
+            <a href="https://docs.angularjs.org/api/ng/directive/ngController" target="_blank">(info here)</a>
+        </p>
+    </div>
+</div>
+<accordion>
+    <accordion-group is-open="ex1.open">
+        <accordion-heading>
+            Task 1 - Get a list of users
+            <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': ex1.open, 'glyphicon-chevron-right': !ex1.open}"></i>
+            <span ng-show="users.getUsers" class="text-success pull-right">(Function declared)</span> 
+        </accordion-heading>
+        <p>
+            You will implement a controller function getUsers. The function will make a http GET request to <code>'/users'</code> endpoint.
+            This end point will return a collection of 10 user objects.
+        </p>
+        <p>
+            The function will be invoked upon controller initialisation and will set a variable called <code>list</code> which will be
+            made available to the view.
+        </p>
+        <div class="alert alert-warning">
+            <strong>Note</strong>
+            <ul>
+                <li>
+                    Function must only use Angular's 
+                    <a href="https://docs.angularjs.org/api/ng/service/$http" target="_blank"><code>$http</code></a> service or ngResource modules' 
+                    <a href="https://docs.angularjs.org/api/ngResource/service/$resource" target="_blank"><code>$resource</code></a> service to make the requests.
+                </li>
+            </ul>
+        </div>
+    </accordion-group>
+    <accordion-group is-open="ex2.open">
+        <accordion-heading>
+            Task 2 - Display the list of users
+            <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': ex2.open, 'glyphicon-chevron-right': !ex2.open}"></i>
+        </accordion-heading>
+        <p>The list of users will be displayed, sorted in ascending alphabetical order by their forenames.</p>
+        <div class="alert alert-info">
+            <strong>Tips</strong>
+            <ul>
+                <li>Angular has a list of filters. <a href="https://docs.angularjs.org/api/ng/filter" target="_blank">Filters</a> </li>
+            </ul>
+        </div>
+    </accordion-group>
+    <accordion-group is-open="ex3.open">
+        <accordion-heading>
+            Task 3 - Show an alert while list is loading.
+            <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': ex3.open, 'glyphicon-chevron-right': !ex3.open}"></i>
+        </accordion-heading>
+        <p>While the front end is waiting for the collection of users to be returned - a message should be shown to inform the user.</p>
+    </accordion-group>
+    <accordion-group is-open="ex4.open">
+        <accordion-heading>
+            Task 4 - Let the user refresh the list random users.
+            <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': ex4.open, 'glyphicon-chevron-right': !ex4.open}"></i>
+        </accordion-heading>
+        <p>There is a button in the view, use this button to refresh the list of users.</p>
+    </accordion-group>
+    <accordion-group is-open="ex5.open">
+        <accordion-heading>
+            Task 5 - Style view to match working example
+            <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': ex5.open, 'glyphicon-chevron-right': !ex5.open}"></i>
+        </accordion-heading>
+        <p>Use bootstrap CSS & <code>/app/exercise2/solution.css</code> to style the elements to closely match the working example.</p>
+    </accordion-group>
+    <accordion-group is-open="ex6.open">
+        <accordion-heading>
+            Task 6 - User images will not display on small devices
+            <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': ex5.open, 'glyphicon-chevron-right': !ex6.open}"></i>
+        </accordion-heading>
+        <p>Profile images will only be displayed when viewport width is greater than 480px.</p>
+    </accordion-group>
+
+</accordion>

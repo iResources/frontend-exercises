@@ -1,0 +1,16 @@
+<!-- Task 3 & 4 Make view work then style to match working example -->
+
+<!-- Input form -->
+<form ng-submit="addItem(newItem)">
+    <div class="form-group">
+        <input type="text" ng-model="newItem" placeholder="Enter item.." />
+    </div>
+</form>
+
+<!-- Shopping list -->
+<ul class="list-unstyled">
+    <li ng-repeat="item in list | orderBy: item" class="panel panel-default">
+        <span class="shopping-item">{{ ::item }}</span>
+        <button type="buttom" class="" ng-click="">Remove</button>
+    </li>
+</ul>
